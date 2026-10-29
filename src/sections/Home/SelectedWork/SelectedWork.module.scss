@@ -1,0 +1,20 @@
+@import "../../../styles/shared.module";
+
+.container {
+  padding-bottom: 12rem;
+}
+
+.header {
+  margin-bottom: 4rem;
+  font: var(--fonts__header_4);
+
+  @include media-breakpoint-up(lg) {
+    font: var(--fonts__header_3);
+  }
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}

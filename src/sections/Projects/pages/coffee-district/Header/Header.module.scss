@@ -1,0 +1,14 @@
+@import "../../../../../styles/shared.module";
+
+.container {
+  padding-top: 6.2rem;
+  padding-bottom: 4rem;
+}
+
+.header {
+  font: var(--fonts__header_4);
+
+  @include media-breakpoint-up(lg) {
+    font: var(--fonts__header_3);
+  }
+}

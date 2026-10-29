@@ -1,0 +1,23 @@
+.link {
+  position: relative;
+  display: grid;
+}
+
+.text {
+  grid-row: 1;
+  grid-column: 1;
+
+  .link_success & {
+    visibility: hidden;
+  }
+
+  &_success {
+    visibility: hidden;
+    justify-self: center;
+  }
+
+  .link_success &_success {
+    visibility: visible;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,21 @@
+@use "sass:string";
+@use "sass:map";
+
+// !!!important
+// if it's changed, Colors type in colors.ts must be changed too
+// either you must add css var to :root in index.scss
+$colors: (
+  "bg": #ffffff,
+);
+
+@function get-color-var-value($name) {
+  @return map.get($colors, $name);
+}
+
+// export all $colors to js like object {PRIMARY: string, SECONDARY: string....}
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:export {
+  @each $color, $value in $colors {
+    #{string.to-upper-case(string.unquote($color))}: $value;
+  }
+}

@@ -1,0 +1,11 @@
+@import "../../../styles/shared.module";
+
+.container {
+  padding-bottom: 12rem;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}

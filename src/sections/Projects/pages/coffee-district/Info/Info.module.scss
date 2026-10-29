@@ -1,0 +1,37 @@
+@import "../../../../../styles/shared.module";
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  padding-bottom: 6rem;
+}
+
+.cover {
+  margin-bottom: -2rem;
+}
+
+.section {
+  scroll-margin-top: calc(var(--app-header-height, 0) + 3.2rem);
+}
+
+.blockContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+.media {
+  margin-bottom: 2.4rem;
+}
+
+.header {
+  margin-bottom: 0.8rem;
+  font: var(--fonts__header_5);
+}
+
+.description {
+  max-width: var(--max-text-width);
+  font: var(--fonts__paragraph_2);
+}

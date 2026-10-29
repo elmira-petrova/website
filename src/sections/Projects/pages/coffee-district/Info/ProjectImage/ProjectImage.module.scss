@@ -1,0 +1,16 @@
+@import "../../../../../../styles/shared.module";
+
+.img {
+  position: relative;
+  width: 100%;
+  height: 30rem;
+  background-color: var(--colors__background_layer);
+
+  @include media-breakpoint-up(sm) {
+    height: 50rem;
+  }
+}
+
+.img__img {
+  object-fit: contain;
+}

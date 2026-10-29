@@ -1,0 +1,49 @@
+@import "../../../styles/shared.module";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-bottom: 6rem;
+
+  @include media-breakpoint-up(lg) {
+    flex-direction: row;
+  }
+}
+
+.photo {
+  position: relative;
+  height: 40rem;
+  background-color: var(--colors__background_layer);
+
+  @include media-breakpoint-up(lg) {
+    flex-shrink: 0;
+    width: 47rem;
+  }
+}
+
+.photo__img {
+  object-position: 0 center;
+
+  @include media-breakpoint-up(md) {
+    object-position: 0 -7.6rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+    object-position: 0 center;
+  }
+}
+
+.header {
+  font: var(--fonts__header_5);
+
+  &_last {
+    margin-top: 2.4rem;
+  }
+}
+
+.description {
+  max-width: var(--max-text-width);
+  margin-top: 0.8rem;
+  font: var(--fonts__paragraph_2);
+}

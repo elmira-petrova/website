@@ -1,0 +1,42 @@
+@import "../../../../../../styles/shared.module";
+
+.slideshow {
+  --slideshow-slides: 0;
+  --slideshow-height: 30rem;
+
+  position: relative;
+  width: 100%;
+  height: var(--slideshow-height);
+  overflow: hidden;
+  background-color: var(--colors__background_layer);
+
+  @include media-breakpoint-up(sm) {
+    --slideshow-height: 50rem;
+  }
+}
+
+.slides {
+  margin: auto;
+  animation: slideshow calc(2s * var(--slideshow-slides))
+    steps(var(--slideshow-slides), jump-none) infinite;
+}
+
+@keyframes slideshow {
+  0% {
+    transform: translateY(0%);
+  }
+
+  100% {
+    transform: translateY(calc(-100% + var(--slideshow-height)));
+  }
+}
+
+.slide {
+  position: relative;
+  width: 100%;
+  height: var(--slideshow-height);
+}
+
+.img {
+  object-fit: contain;
+}

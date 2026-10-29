@@ -1,0 +1,34 @@
+@import "../../../../../../styles/shared.module";
+
+.img {
+  --img-height: 30rem;
+  --scroll-animation-duration: 20s;
+
+  position: relative;
+  height: var(--img-height);
+  margin-bottom: 1.6rem;
+  overflow: hidden;
+  background-color: var(--colors__background_layer);
+
+  @include media-breakpoint-up(md) {
+    --img-height: 50rem;
+  }
+}
+
+.img__img {
+  width: 100%;
+  height: auto;
+  animation: img-scroll var(--scroll-animation-duration) ease-in-out infinite
+    alternate;
+}
+
+@keyframes img-scroll {
+  0%,
+  25% {
+    transform: translate3d(0, 0%, 0);
+  }
+
+  100% {
+    transform: translate3d(0, calc(-100% + var(--img-height)), 0);
+  }
+}

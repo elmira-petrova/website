@@ -1,0 +1,19 @@
+@import "../../../styles/shared.module";
+
+.container {
+  padding-bottom: 12rem;
+}
+
+.list__description {
+  margin-top: 0.8rem;
+}
+
+.swiper {
+  margin: 2.4rem 0;
+}
+
+.img {
+  width: 21rem;
+  height: 21rem;
+  background-color: var(--colors__background_layer);
+}

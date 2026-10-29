@@ -1,0 +1,39 @@
+@import "../../../../styles/shared.module";
+
+.container {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--colors__bg);
+}
+
+.contentContainer {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.6rem;
+  padding-bottom: 0.8rem;
+
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
+
+  &_desktop {
+    display: none;
+
+    @include media-breakpoint-up(lg) {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 3.2rem;
+      padding-bottom: 1.2rem;
+    }
+  }
+}
+
+.shadow {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  box-shadow: 0 8px 8px -8px #1616161a;
+}

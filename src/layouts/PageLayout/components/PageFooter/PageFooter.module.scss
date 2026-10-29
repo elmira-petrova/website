@@ -1,0 +1,36 @@
+@import "../../../../styles/shared.module";
+
+.container {
+  padding-bottom: 4rem;
+}
+
+.header {
+  font: var(--fonts__header_3);
+  text-align: center;
+
+  @include media-breakpoint-up(xl) {
+    font: var(--fonts__header_2);
+  }
+}
+
+.text {
+  margin-top: 0.8rem;
+  font: var(--fonts__paragraph_2);
+  text-align: center;
+}
+
+.links {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2.4rem;
+}
+
+.copyright {
+  margin-top: 6rem;
+  font: var(--fonts__paragraph_3);
+}
+
+.miroslav {
+  font: inherit;
+}

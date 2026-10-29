@@ -1,0 +1,51 @@
+@import "../../../../../styles/shared.module";
+
+.container {
+  margin-bottom: 12rem;
+}
+
+.link {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.6rem;
+  padding: 2rem;
+
+  &:hover {
+    background-color: var(--colors__button_hovered);
+  }
+
+  &:focus-visible {
+    outline: 0;
+    box-shadow: inset 0 0 0 2px var(--focus-visible-outline-color);
+  }
+
+  &:active {
+    background-color: var(--colors__button_active);
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: 3rem;
+  }
+}
+
+.img {
+  position: relative;
+  justify-self: end;
+  width: 13rem;
+  height: 9rem;
+  background-color: #d9d9d9;
+}
+
+.text {
+  font: var(--fonts__paragraph_3);
+}
+
+.name {
+  display: block;
+  margin-top: 0.8rem;
+  font: var(--fonts__header_4);
+
+  @include media-breakpoint-up(lg) {
+    font: var(--fonts__header_3);
+  }
+}

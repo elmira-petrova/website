@@ -1,0 +1,26 @@
+@import "../../../../styles/shared.module";
+
+.img {
+  --scroll-animation-duration: 15s;
+
+  @include media-breakpoint-up(md) {
+    --img-height: 35rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+    --img-height: 40rem;
+  }
+}
+
+.header {
+  font: var(--fonts__header_5);
+}
+
+.header__type {
+  color: var(--colors__text_tertiary);
+}
+
+.description {
+  margin-top: 0.8rem;
+  font: var(--fonts__paragraph_2);
+}

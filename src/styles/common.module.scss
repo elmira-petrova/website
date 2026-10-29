@@ -1,0 +1,79 @@
+@use "shared.module" as *;
+
+.contentContainer {
+  --paddingLeft: max(env(safe-area-inset-left), var(--content-padding));
+  --paddingRight: max(env(safe-area-inset-right), var(--content-padding));
+
+  width: 100%;
+  max-width: calc(
+    var(--max-content-width) + var(--paddingLeft) + var(--paddingRight)
+  );
+  padding-right: var(--paddingRight);
+  padding-left: var(--paddingLeft);
+  margin: 0 auto;
+}
+
+.interactive {
+  cursor: pointer;
+
+  &:hover {
+    opacity: var(--hover-opacity);
+  }
+
+  &:focus-visible {
+    outline: 0;
+    box-shadow: inset 0 0 0 2px var(--focus-visible-outline-color);
+  }
+
+  &:active {
+    opacity: var(--active-opacity);
+  }
+
+  &:disabled {
+    opacity: var(--disabled-opacity);
+  }
+
+  &_outlineOutside:focus-visible {
+    box-shadow: 0 0 0 2px var(--focus-visible-outline-color);
+  }
+}
+
+.absoluteCenter {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+}
+
+.transformCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.breakLongWord {
+  hyphens: auto;
+  word-break: break-all;
+  overflow-wrap: break-word;
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ellipsisMultiline {
+  --linesToShow: 2;
+
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: var(--linesToShow);
+  line-clamp: var(--linesToShow);
+  -webkit-box-orient: vertical;
+}
+
+.visuallyHidden {
+  @include visually-hidden;
+}

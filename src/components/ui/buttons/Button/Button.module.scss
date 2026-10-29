@@ -1,0 +1,41 @@
+.button {
+  gap: 0.8rem;
+  min-height: 4rem;
+  padding: 0.8rem 1.6rem;
+  font: var(--fonts__paragraph_2);
+  text-align: center;
+  text-transform: unset;
+  letter-spacing: normal;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+
+  &:disabled {
+    opacity: 1;
+  }
+
+  &_variant_primary {
+    color: var(--colors__text_primary);
+
+    &:hover {
+      background-color: var(--colors__button_hovered);
+    }
+
+    &:active {
+      background-color: var(--colors__button_active);
+    }
+
+    &:disabled {
+      color: var(--colors__text_diasbled);
+      background-color: unset;
+    }
+  }
+}

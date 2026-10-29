@@ -1,0 +1,10 @@
+/ci-cd-files/Dockerfile
+/ci-cd-files/Dockerfile.dockerignore
+node_modules
+npm-debug.log
+README.md
+.next
+.git
+dist
+test
+.env*.local
