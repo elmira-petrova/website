@@ -1,0 +1,24 @@
+.time {
+  font: var(--fonts__paragraph_3);
+  color: var(--colors__text_tertiary);
+}
+
+.tick {
+  animation: tick 2s infinite;
+}
+
+@keyframes tick {
+  0%,
+  40% {
+    opacity: 1;
+  }
+
+  50%,
+  90% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,89 @@
+@import "../../../../../../styles/shared.module";
+
+.aside {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(100% - var(--paddingRight) + 2rem);
+  display: none;
+  width: calc((100vw - 100%) / 2 - var(--paddingRight));
+  max-width: 40rem;
+
+  @include media-breakpoint-up(xxl) {
+    display: block;
+  }
+}
+
+.stickyContainer {
+  --top: calc(var(--app-header-height, 0) + 3.2rem);
+
+  position: sticky;
+  top: var(--top);
+  max-height: calc(100vh - var(--top));
+  overflow-y: auto;
+  animation: slide-in 0.75s 0.3s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+.backLink {
+  margin-bottom: 2.4rem;
+  text-align: left;
+}
+
+.nav {
+  --indicator-height: 0px;
+  --indicator-top: 0px;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-left: 1.2rem;
+}
+
+.nav__item {
+  display: block;
+
+  &_current {
+    color: var(--colors__text_primary);
+  }
+}
+
+.indicator {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 0.4rem;
+  overflow: hidden;
+  background-color: #d9d9d9;
+  border-radius: 1.2rem;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-height: var(--indicator-height);
+    content: "";
+    background-color: black;
+    transform: translate3d(0, var(--indicator-top), 0);
+    transition:
+      transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+      max-height 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    filter: blur(8px);
+    transform: translate3d(0, 12px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translate3d(0, 0, 0);
+  }
+}

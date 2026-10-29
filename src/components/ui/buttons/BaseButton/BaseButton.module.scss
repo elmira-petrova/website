@@ -1,0 +1,25 @@
+.button {
+  min-width: unset;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+
+  &:hover {
+    background-color: transparent;
+    opacity: var(--hover-opacity);
+  }
+
+  &:focus-visible,
+  &:global(.Mui-focusVisible) {
+    outline: var(--focus-visible-outline-color) solid 1px;
+  }
+
+  &:active {
+    opacity: var(--active-opacity);
+  }
+
+  &:disabled {
+    color: inherit;
+    opacity: var(--disabled-opacity);
+  }
+}

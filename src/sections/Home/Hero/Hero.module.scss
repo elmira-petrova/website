@@ -1,0 +1,39 @@
+@import "../../../styles/shared.module";
+
+.container {
+  position: relative;
+  padding-top: 7.2rem;
+  padding-bottom: 18.6rem;
+
+  @include media-breakpoint-up(md) {
+    padding-bottom: 27.8rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding-top: 16.2rem;
+    padding-bottom: 32rem;
+  }
+}
+
+.description {
+  margin-top: 0.8rem;
+  font: var(--fonts__paragraph_2);
+  text-align: center;
+
+  @include media-breakpoint-up(lg) {
+    font: var(--fonts__paragraph_1);
+  }
+}
+
+.photo {
+  position: relative;
+  display: block;
+  width: 6rem;
+  height: 6rem;
+  margin: 2rem auto 0;
+  font-size: 0;
+
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
+}

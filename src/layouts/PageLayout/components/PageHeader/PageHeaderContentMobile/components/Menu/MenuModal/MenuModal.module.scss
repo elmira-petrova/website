@@ -1,0 +1,15 @@
+.root {
+  top: var(--app-header-height, 0);
+  overflow: hidden;
+}
+
+.paper {
+  position: relative;
+  background-color: var(--colors__bg);
+}
+
+.divider {
+  height: 1px;
+  margin: 2rem 0;
+  background-color: var(--colors__stroke_secondary);
+}

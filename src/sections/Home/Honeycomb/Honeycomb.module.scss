@@ -1,0 +1,17 @@
+@import "../../../styles/shared.module";
+
+.container {
+  padding-bottom: 12rem;
+}
+
+.poster {
+  position: relative;
+  color: var(--colors__text_primary);
+  background-color: currentColor;
+}
+
+.canvas {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}

@@ -1,0 +1,114 @@
+@use "imports.module" as *;
+@use "shared.module" as *;
+@use "colors.module" as *;
+@use "common.module" as *;
+
+:root {
+  /* COLORS */
+  --colors__bg: #{get-color-var-value("bg")};
+  --colors__background_layer: #f4f4f4;
+  --colors__text_primary: #161616;
+  --colors__text_tertiary: #8d8d8d;
+  --colors__text_success: #24a148;
+  --colors__text_diasbled: #1616164d;
+  --colors__stroke_primary: #161616;
+  --colors__stroke_secondary: #16161612;
+  --colors__button_hovered: #8d8d8d1f;
+  --colors__button_active: #8d8d8d80;
+  --colors__button_focused: #0f62fe;
+}
+
+:root {
+  /* FONTS */
+  --font-family: "Lato", sans-serif;
+  --font-family-header: "Bricolage Grotesque Variable", sans-serif;
+  --font-family-logo: "Konkhmer Sleokchher", serif;
+  --fonts__header_1: 500 6rem / 7.2rem var(--font-family-header);
+  --fonts__header_2: 500 4rem / 4.8rem var(--font-family-header);
+  --fonts__header_3: 500 3.2rem / 3.8rem var(--font-family-header);
+  --fonts__header_4: 500 2.4rem / 3rem var(--font-family-header);
+  --fonts__header_5: 600 2rem / 2.4rem var(--font-family);
+  --fonts__paragraph_1: 400 2rem / 2.4rem var(--font-family);
+  --fonts__paragraph_2: 400 1.6rem / 2.2rem var(--font-family);
+  --fonts__paragraph_3: 400 1.4rem / 1.8rem var(--font-family);
+}
+
+:root {
+  /* SHADOWS */
+  --shadow__2dp: 0 1px 2px 0 rgb(15 25 40 / 0.08);
+  --shadow__4dp:
+    0 1px 2px 0 rgb(15 25 40 / 0.04), 0 1px 4px 0 rgb(15 25 40 / 0.12);
+  --shadow__6dp:
+    0 2px 4px 0 rgb(15 25 40 / 0.04), 0 4px 12px -2px rgb(15 25 40 / 0.12);
+  --shadow__8dp:
+    0 4px 12px -4px rgb(15 25 40 / 0.04), 0 8px 20px -4px rgb(15 25 40 / 0.08);
+  --shadow__12dp:
+    0 12px 12px -8px rgb(15 25 40 / 0.04),
+    0 20px 24px -12px rgb(15 25 40 / 0.12);
+  --shadow__16dp: 0 24px 48px -16px rgb(15 25 40 / 0.24);
+}
+
+:root {
+  --hover-opacity: 0.8;
+  --active-opacity: 0.6;
+  --disabled-opacity: 0.4;
+  --focus-visible-outline-color: var(--colors__button_focused);
+  --max-content-width: 96rem;
+  --max-text-width: 64rem;
+  --content-padding: 1.6rem;
+
+  @include media-breakpoint-up(md) {
+    --content-padding: 2.4rem;
+  }
+}
+
+html,
+body,
+#__next {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+html {
+  height: 100%;
+  font-size: 62.5%;
+  background-color: var(--colors__bg);
+}
+
+body {
+  min-width: 36rem;
+  font: var(--fonts__paragraph_2);
+  color: var(--colors__text_primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:where(h1, h2, h3, h4, h5, h6, p) {
+  margin: 0;
+}
+
+:where(button, input, select, textarea) {
+  padding: 0;
+  border: 0;
+}
+
+:where(ul) {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+:where(a) {
+  color: inherit;
+  text-decoration: none;
+}
+
+:where(svg) {
+  fill: currentColor;
+}
+
+:where(img) {
+  object-fit: cover;
+  object-position: center;
+}

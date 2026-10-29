@@ -1,0 +1,42 @@
+@import "../../../../styles/shared.module";
+
+.header {
+  position: relative;
+  width: fit-content;
+  margin: auto;
+  font: var(--fonts__header_2);
+  text-align: center;
+
+  @include media-breakpoint-up(lg) {
+    font: var(--fonts__header_1);
+  }
+}
+
+.char {
+  --char-hover-color: currentColor;
+
+  display: inline-block;
+  white-space: pre-wrap;
+  transition: color 2s ease-in;
+
+  &:hover {
+    color: var(--char-hover-color);
+    transition: color 0s;
+  }
+}
+
+.photo {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(100% + 2rem);
+  display: none;
+  width: 6rem;
+  height: 6rem;
+  margin: auto;
+  font-size: 0;
+
+  @include media-breakpoint-up(lg) {
+    display: block;
+  }
+}

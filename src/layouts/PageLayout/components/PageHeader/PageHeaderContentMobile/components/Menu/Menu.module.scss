@@ -1,0 +1,31 @@
+.button {
+  padding: 1rem;
+  font: var(--fonts__paragraph_2);
+}
+
+.button__contentContainer {
+  height: 2.2rem;
+  overflow: hidden;
+}
+
+.button__content {
+  display: block;
+  transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  &_open {
+    transform: translateY(-50%);
+  }
+
+  &::before,
+  &::after {
+    display: block;
+  }
+
+  &::before {
+    content: "Menu";
+  }
+
+  &::after {
+    content: "Close";
+  }
+}

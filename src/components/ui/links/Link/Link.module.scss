@@ -1,0 +1,13 @@
+.link {
+  font: var(--fonts__paragraph_2);
+  color: var(--colors__text_tertiary);
+
+  &:hover {
+    color: var(--colors__text_primary);
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: var(--active-opacity);
+  }
+}

@@ -1,0 +1,21 @@
+.tooltip {
+  --bg-color: #fff6c1;
+
+  max-width: 50rem;
+  padding: 0.8rem 1.2rem;
+  font: var(--fonts__paragraph_3);
+  color: var(--colors__text_primary);
+  background-color: var(--bg-color);
+  border: none;
+  border-radius: 0;
+}
+
+.arrow {
+  width: 20px;
+  color: var(--bg-color);
+
+  &::before {
+    width: 10px;
+    height: 10px;
+  }
+}
